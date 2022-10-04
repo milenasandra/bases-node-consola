@@ -1,11 +1,9 @@
- const { crearArchivo } = require('./helpers/multiplicar')
- const colors = require('colors')
+require('colors')
+const { crearArchivo } = require('./helpers/multiplicar')
+ const argv = require('./helpers/yargs')
 
- const base = 5
- console.clear()
+console.clear()
 
-
-
-crearArchivo(base).then((nombreArchivo) => 
-    console.log(`Se ha creado el archivo ${nombreArchivo.rainbow}`)
+crearArchivo(argv.b, argv.l, argv.h).then((nombreArchivo) => 
+    console.log(`Se ha creado el archivo ${nombreArchivo.red}`)
 ).catch((error) => console.log(error))
