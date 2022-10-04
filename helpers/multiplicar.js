@@ -20,7 +20,7 @@ if (listar) {
 
 const nombreArchivo = `tabla-${base}.txt`
 
-fs.writeFile( nombreArchivo, tablaArchivo, (err)=>{
+fs.writeFile(`./tablas/${nombreArchivo}`, tablaArchivo, (err)=>{
     if(err) throw err
 })
 return nombreArchivo    
